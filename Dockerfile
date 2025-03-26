@@ -7,8 +7,4 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:21-jdk
 COPY --from=build /target/dsa-multilang-website-0.0.1-SNAPSHOT.jar dsa-multilang-website.jar
 EXPOSE 8080
-
 ENTRYPOINT ["java", "-jar", "dsa-multilang-website.jar"]
-
-
-
