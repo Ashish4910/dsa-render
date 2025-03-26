@@ -13,7 +13,8 @@ FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/target/dsa-website.jar dsa-website.jar
+COPY --from=build /app/target/dsa-website-0.0.1-SNAPSHOT.jar dsa-website.jar
+
 
 # Expose port 8080
 EXPOSE 8080
